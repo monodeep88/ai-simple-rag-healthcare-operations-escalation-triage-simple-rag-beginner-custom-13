@@ -1,0 +1,244 @@
+{
+  "mode": "ai",
+  "project_title": "Healthcare Operations Escalation Triage",
+  "short_description": "AI-powered triage system for healthcare operations escalation",
+  "domain_summary": "{'description': 'Healthcare operations escalation triage system', 'key_terms': ['healthcare', 'operations', 'escalation', 'triage'], 'pain_points': ['Long response times', 'Inconsistent decision-making', 'High staff workload']}",
+  "user_persona": "Healthcare Operations Manager: Responsible for managing healthcare operations and making timely decisions",
+  "architecture_notes": [
+    "Use of containerization and service registry for scalability and maintainability"
+  ],
+  "backend_modules": [
+    "API Gateway: Handles incoming requests and routes them to the appropriate service",
+    "Service Registry: Manages service instances and their metadata",
+    "Machine Learning Model: Trained model for predicting patient outcomes"
+  ],
+  "frontend_features": [
+    "Patient Information Form: Collects patient information and sends it to the API Gateway",
+    "Triage Result Display: Displays the triage result to the user"
+  ],
+  "data_sources": [
+    "Patient Data: Patient information and medical history",
+    "Medical Literature: Relevant medical literature and research"
+  ],
+  "testing_strategy": [
+    "Unit testing, integration testing, and end-to-end testing"
+  ],
+  "starter_questions": [
+    "What is the patient's medical history?",
+    "What are the patient's symptoms?",
+    "What is the patient's current condition?"
+  ],
+  "workflow_steps": [
+    "Patient Information Collection: Collects patient information and sends it to the API Gateway",
+    "Triage Prediction: Uses the machine learning model to predict the patient's outcome",
+    "Triage Result Display: Displays the triage result to the user"
+  ],
+  "business_rules": [
+    "Patient Priority: Prioritizes patients based on their condition and medical history",
+    "Triage Threshold: Determines the threshold for triage based on the patient's condition"
+  ],
+  "sample_documents": [
+    {
+      "filename": "patient_information_form.pdf",
+      "content": "Patient Information Form"
+    },
+    {
+      "filename": "triage_result_display.pdf",
+      "content": "Triage Result Display"
+    }
+  ],
+  "tool_catalog": [
+    {
+      "name": "API Gateway",
+      "description": "Handles incoming requests and routes them to the appropriate service"
+    },
+    {
+      "name": "Service Registry",
+      "description": "Manages service instances and their metadata"
+    },
+    {
+      "name": "Machine Learning Model",
+      "description": "Trained model for predicting patient outcomes"
+    }
+  ],
+  "agent_plan": [
+    {
+      "name": "Architecture Agent",
+      "role": "Define app boundaries, data flow, runtime stack, and integration points.",
+      "outputs": [
+        "Use of containerization and service registry for scalability and maintainability"
+      ]
+    },
+    {
+      "name": "Backend Agent",
+      "role": "Design FastAPI modules, service contracts, validation, and error handling.",
+      "outputs": [
+        "API Gateway: Handles incoming requests and routes them to the appropriate service",
+        "Service Registry: Manages service instances and their metadata",
+        "Machine Learning Model: Trained model for predicting patient outcomes"
+      ]
+    },
+    {
+      "name": "Frontend Agent",
+      "role": "Design React screens, state flow, controls, and user feedback states.",
+      "outputs": [
+        "Patient Information Form: Collects patient information and sends it to the API Gateway",
+        "Triage Result Display: Displays the triage result to the user"
+      ]
+    },
+    {
+      "name": "Database Agent",
+      "role": "Design persistence models, sample data, indexes, and audit records.",
+      "outputs": [
+        "Run history",
+        "Source document metadata",
+        "Generated workflow audit records"
+      ]
+    },
+    {
+      "name": "Testing Agent",
+      "role": "Define contract tests, smoke tests, and generated project validation.",
+      "outputs": [
+        "Unit testing, integration testing, and end-to-end testing"
+      ]
+    },
+    {
+      "name": "DevOps Agent",
+      "role": "Define environment variables, Docker workflow, and repository packaging.",
+      "outputs": [
+        "Docker-ready project",
+        "Environment sample file",
+        "GitHub repository upload"
+      ]
+    },
+    {
+      "name": "Reviewer Agent",
+      "role": "Review the generated plan for completeness, security, and portfolio quality.",
+      "outputs": [
+        "Patient Information Collection: Collects patient information and sends it to the API Gateway",
+        "Triage Prediction: Uses the machine learning model to predict the patient's outcome",
+        "Triage Result Display: Displays the triage result to the user"
+      ]
+    }
+  ],
+  "model_provider": "groq",
+  "model_name": "llama-3.1-8b-instant",
+  "fallback_reason": "OpenAI limit reached. Automatically switched to Groq.",
+  "architecture": "Real Estate Policy Assistant",
+  "architecture_template_id": 41,
+  "architecture_template_path": "templates/simple-rag/real-estate-policy-assistant",
+  "architecture_description": "Real Estate Policy Assistant for lease and property policy lookup.",
+  "architecture_version": "1.0",
+  "architecture_origin": "built_in",
+  "architecture_quality_score": 100,
+  "architecture_evolution_notes": "",
+  "architecture_technology": null,
+  "architecture_source_version": null,
+  "validation_pipeline": [
+    "pytest",
+    "npm install",
+    "npm run build",
+    "docker compose config",
+    "docker compose build"
+  ],
+  "problem_statement": "Build a portfolio-ready Simple RAG application for Healthcare Operations Escalation Triage Simple RAG - Beginner Custom 13 that returns explainable answers with sources and timeline evidence.",
+  "target_users": [
+    "Students",
+    "Junior developers",
+    "Portfolio reviewers",
+    "Interviewers"
+  ],
+  "functional_requirements": [
+    "Accept a user question or task from the React UI.",
+    "Validate request shape and reject empty input.",
+    "Execute the Simple RAG workflow with observable timeline steps.",
+    "Return answer, cited sources, timeline, and project metadata.",
+    "Persist each run for debugging, demos, and interview explanation."
+  ],
+  "non_functional_requirements": [
+    "Keep local deterministic fallback behavior so the repo runs without paid API keys.",
+    "Avoid logging secrets or raw provider credentials.",
+    "Keep API responses stable enough for frontend and tests.",
+    "Support Docker-based local deployment and PostgreSQL production storage.",
+    "Keep generated documentation accurate enough for portfolio review."
+  ],
+  "entities": [
+    "RunLog",
+    "SourceDocument",
+    "RetrievedChunk",
+    "TimelineStep",
+    "EmbeddingRecord",
+    "VectorCollection"
+  ],
+  "database_tables": [
+    "run_logs",
+    "source_documents",
+    "retrieved_chunks",
+    "timeline_steps"
+  ],
+  "api_endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "purpose": "Health check for deployment and monitoring."
+    },
+    {
+      "method": "POST",
+      "path": "/api/ask",
+      "purpose": "Run the Simple RAG workflow for a user question."
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs",
+      "purpose": "Return recent stored run logs for review and debugging."
+    }
+  ],
+  "workflows": [
+    "Patient Information Collection: Collects patient information and sends it to the API Gateway",
+    "Triage Prediction: Uses the machine learning model to predict the patient's outcome",
+    "Triage Result Display: Displays the triage result to the user"
+  ],
+  "architecture_components": [
+    "React frontend",
+    "FastAPI backend",
+    "Pipeline service",
+    "Vector/search service",
+    "SQL database",
+    "Optional LLM provider"
+  ],
+  "sequence_flows": [
+    "Main ask flow",
+    "RAG retrieval flow",
+    "Agent execution flow",
+    "Provider fallback flow"
+  ],
+  "security_controls": [
+    "Input validation",
+    "CORS allowlist",
+    "Secret-only environment variables",
+    "Safe logging",
+    "Rate limiting recommendation"
+  ],
+  "scalability_plan": [
+    "Move long runs to a queue",
+    "Use PostgreSQL in production",
+    "Use managed vector DB when data grows",
+    "Cache repeated retrievals",
+    "Add metrics and traces"
+  ],
+  "interview_topics": [
+    "Problem statement",
+    "Architecture layers",
+    "DFD levels",
+    "Database schema",
+    "API contract",
+    "Security",
+    "Scaling"
+  ],
+  "documentation_quality_pipeline": [
+    "enrich_blueprint",
+    "write_design_docs",
+    "validate_required_docs",
+    "qa_score_before_push"
+  ]
+}
