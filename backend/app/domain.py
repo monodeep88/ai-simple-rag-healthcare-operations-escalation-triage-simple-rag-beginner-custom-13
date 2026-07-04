@@ -1,0 +1,6 @@
+DOMAIN_SUMMARY = "{'description': 'Healthcare operations escalation triage system', 'key_terms': ['healthcare', 'operations', 'escalation', 'triage'], 'pain_points': ['Long response times', 'Inconsistent decision-making', 'High staff workload']}"
+USER_PERSONA = 'Healthcare Operations Manager: Responsible for managing healthcare operations and making timely decisions'
+STARTER_QUESTIONS = ["What is the patient's medical history?", "What are the patient's symptoms?", "What is the patient's current condition?"]
+WORKFLOW_STEPS = ['Patient Information Collection: Collects patient information and sends it to the API Gateway', "Triage Prediction: Uses the machine learning model to predict the patient's outcome", 'Triage Result Display: Displays the triage result to the user']
+BUSINESS_RULES = ['Patient Priority: Prioritizes patients based on their condition and medical history', "Triage Threshold: Determines the threshold for triage based on the patient's condition"]
+TOOL_CATALOG = [{'name': 'api_gateway', 'description': 'Handles incoming requests and routes them to the appropriate service'}, {'name': 'service_registry', 'description': 'Manages service instances and their metadata'}, {'name': 'machine_learning_model', 'description': 'Trained model for predicting patient outcomes'}]
